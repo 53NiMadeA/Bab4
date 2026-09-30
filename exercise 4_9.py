@@ -1,0 +1,14 @@
+# Exercise 4.9
+# Menggunakan VGG19 вместо VGG16
+
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.vgg19 import VGG19
+from tensorflow.keras.applications.vgg19 import preprocess_input
+from keras.applications.imagenet_utils import decode_predictions
+import numpy as np
+
+# Load VGG19 model
+model = VGG19(weights='imagenet')
+
+# Display model summary
+print(model.summary())
